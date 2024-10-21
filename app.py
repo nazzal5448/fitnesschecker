@@ -35,11 +35,11 @@ st.dataframe(df_x,)
 if st.button(label="Submit",type="primary", icon="📤"):
     predictions=model.predict(df_x)
     if predictions==0:
-        st.warning("Your fitness level is Beginner!")
+        st.info("Your fitness level is Beginner!")
     elif predictions==1:
-        st.success("Your fitness level is Intermediate!")
+        st.info("Your fitness level is Intermediate!")
     else:
-        st.success("Your fitness level is Advanced!")
+        st.info("Your fitness level is Advanced!")
 
 sb=st.sidebar
 with sb:
